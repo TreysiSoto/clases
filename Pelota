@@ -1,0 +1,64 @@
+package tarea04;
+class Pelota
+{
+    String tamanio;
+    String color;
+    String material;
+
+    Pelota(String tam,String col, String mat)
+    {
+        establecerTamanio(tam);
+        establecerColor(col);
+        establecerMaterial(mat);
+    }
+
+    public void establecerTamanio(String tam) 
+    {
+        tamanio = tam;
+    }
+    public String obtenerTamanio()
+    {
+        return tamanio;
+    }
+    public void establecerColor(String col) 
+    {
+        color = col;
+    }
+    public String obtenerColor()
+    {
+        return color;
+    }
+    public void establecerMaterial(String mat) 
+    {
+        material = mat;
+    }
+    public String obtenerMaterial()
+    {
+        return material;
+    }
+    void rebotar()
+    {
+        System.out.println("La pelota rebota en la pared");
+    }
+
+    void rodar()
+    {
+        System.out.println("La pelota rueda por el piso");
+    }
+
+    void inflar()
+    {
+        System.out.println("La pelota está inflado");
+    }
+    
+    public static void main(String [] args){
+        Pelota pelota = new Pelota(" mediana","negro y blaco","caucho");
+
+        System.out.println("El tamaño de la pelota es: "+pelota.obtenerTamanio());
+        System.out.println("El color de la pelota es: "+pelota.obtenerColor());
+        System.out.println("La pelota está hecha de: "+pelota.obtenerMaterial());
+        pelota.rebotar();
+        pelota.rodar();
+        pelota.inflar();
+
+    } 
