@@ -1,0 +1,60 @@
+package tarea04;
+
+class Revista 
+{
+    String nombre;
+    String editorial;
+    int volumen;
+
+    Revista(String nom,String edit, int vol)
+    {
+        establecerNombre(nom);
+        establecerEditorial(edit);
+        establecerVolumen(vol);
+    }
+
+    public void establecerNombre(String nom) 
+    {
+        nombre = nom;
+    }
+    public String obtenerNombre()
+    {
+        return nombre;
+    }
+    public void establecerEditorial(String edit) 
+    {
+        editorial = edit;
+    }
+    public String obtenerEditorial()
+    {
+        return editorial;
+    }
+    public void establecerVolumen(int vol) 
+    {
+        volumen = vol;
+    }
+    public int obtenerVolumen()
+    {
+        return volumen;
+    }
+    void entretener()
+    {
+        System.out.println("La seccion de moda entretiene a las mujeres");
+    }
+
+    void informar()
+    {
+        System.out.println("Informar sobre la ultima tendencia en moda");
+    }
+    
+    public static void main(String [] args){
+        Revista revista = new Revista("Revista Somos","El comercio",8);
+
+        System.out.println("Nombre de la revista: "+revista.obtenerNombre());
+        System.out.println("El editorial es : "+revista.obtenerEditorial());
+        System.out.println("El volumen de revista es: "+revista.obtenerVolumen());
+        revista.entretener();
+        revista.informar();
+        
+
+    } 
