@@ -1,0 +1,68 @@
+package tarea04;
+
+class Perro {
+    String nombre;
+    String raza;
+    String color;
+
+    Perro(String nom, String raz, String col)
+    {
+        establecerNombre(nom);
+        establecerRaza(raz);
+        establecerColor(col);
+    }
+
+    public void establecerNombre(String nom) 
+    {
+        nombre = nom;
+    }
+    public String obtenerNombre()
+    {
+        return nombre;
+    }
+    public void establecerRaza(String raz) 
+    {
+        raza = raz;
+    }
+    public String obtenerRaza()
+    {
+        return raza;
+    }
+    public void establecerColor(String col) 
+    {
+        color = col;
+    }
+    public String obtenerColor()
+    {
+        return color;
+    }
+    void comer()
+    {
+        System.out.println("les gusta comer carne");
+    }
+
+    void dormir()
+    {
+        System.out.println("Duerme a cada rato");
+    }
+    void ladrar()
+    {
+        System.out.println("ladra a las personas desconocidas");
+    }
+    
+    public static void main(String [] args){
+        Perro perro1 = new Perro("Doky","Pitbull","Blanco");
+
+        System.out.println("Nombre del perro: "+perro1.obtenerNombre());
+        System.out.println("La raza es : "+perro1.obtenerRaza());
+        System.out.println("El color es: "+perro1.obtenerColor());
+        perro1.comer();
+        perro1.dormir();
+        perro1.ladrar();
+        
+
+    } 
+
+
+    
+}
