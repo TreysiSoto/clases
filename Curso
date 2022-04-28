@@ -1,0 +1,82 @@
+package tarea04;
+
+class Curso
+{
+    String nombre;
+    String docente;
+    int empieza;
+    int finaliza;
+
+    Curso(String nom,String doc, int in, int fi)
+    {
+        establecerNombre(nom);
+        establecerDocente(doc);
+        establecerEmpieza(in);
+        establecerFinaliza(fi);
+    }
+
+    private void establecerNombre(String nom) {
+    }
+
+    public void establecerNom(String nom) 
+    {
+        nombre = nom;
+    }
+    public String obtenerNombre()
+    {
+        return nombre;
+    }
+    public void establecerDocente(String doc) 
+    {
+        docente = doc;
+    }
+    public String obtenerDocente()
+    {
+        return docente;
+    }
+    public void establecerEmpieza( int emp) 
+    {
+         empieza = emp;
+    }
+    public int obtenerEmpieza()
+    {
+        return empieza;
+    }
+    public void establecerFinaliza( int fin) 
+    {
+         finaliza= fin;
+    }
+    public int obtenerFinaliza()
+    {
+        return finaliza;
+    }
+
+    void agregarAlumno()
+    {
+        System.out.println("El curso esta disponible para agregar a un alumno");
+    }
+
+    void borrarAlumno()
+    {
+        System.out.println("se puede borrar a un alumno si no cumple con los requerimientos");
+    }
+
+    void generarLista()
+    {
+        System.out.println("Genra la lista de los matriculados");
+    }
+    
+    public static void main(String [] args){
+        Curso cursox = new Curso("Lenguaje","Javier Valdez", 9 , 11);
+
+        System.out.println("El nombre del curso es: "+cursox.obtenerNombre());
+        System.out.println("El nombre del docente es: "+cursox.obtenerDocente());
+        System.out.println("La hora que empieza el curso es: "+cursox.obtenerEmpieza());
+        System.out.println("La hora que finaliza el curso es: "+cursox.obtenerFinaliza());
+        cursox.agregarAlumno();
+        cursox.borrarAlumno();
+        cursox.generarLista();
+    }
+
+    
+}
